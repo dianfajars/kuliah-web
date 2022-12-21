@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Lingkaran</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        document.write ("<h1><center> Menu Lingkaran </center></h1> <br>");
+        document.write ("<h2> 1. Jari-jari Lingkaran </h2> <br>");
+        document.write ("<h2> 2. Keliling Lingkaran </h2> <br>");
+        document.write ("<h2> 3. Luas Lingkaran </h2> <br>");
+        
+        setTimeout(() => { //Biar ada jeda 3 detik ketika akan memilih menu yang tersedia 
+            var bil = prompt ("Silahkan Pilih (1-3) : "," ");
+        
+
+        if(bil == 1){
+            var a = prompt("Silahkan masukkan jari-jari lingkaran : "," ");
+            document.write ("<h3>Jari-Jari Lingkaran : "+a+" </h3>");
+        }
+        else if(bil == 2){
+            var b = prompt("Silahkan masukkan jari-jari lingkaran : "," ");
+            var c = 2 * 3.14 * parseInt(b);
+            document.write ("<h3>Keliling Lingkaran : "+c+" </h3>");
+        }
+        else if(bil == 3){
+            var d = prompt("Silahkan masukkan jari-jari lingkaran : "," ");
+            var e = 3.14 * parseInt(d) * parseInt(d);
+            document.write ("<h3>Luas Lingkaran : "+e+" </h3>");
+        }
+        else
+            document.write ("<br> <h1>Silahkan Pilih Menu Yang Tersedia</h1>");
+        }, 3000);    
+    </script>
+
+</body>
+</html>

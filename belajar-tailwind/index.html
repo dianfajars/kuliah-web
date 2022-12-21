@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&display=swap" rel="stylesheet">
+    <title>Belajar TailwindCSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      #toggle:checked ~ label div.toggle-circle {
+        @apply translate-x-3;
+      };
+    </style>
+    <script>
+        tailwind.config = {
+          darkMode: 'class',
+          theme: {
+            extend: {
+              spacing: {
+                '13': '3.25rem'
+              },
+              fontFamily: {
+                inter: ['Inter']
+              },
+              colors: {
+
+              }
+            }
+          }
+        }
+      </script>
+</head>
+
+<body class="dark:bg-slate-800 dark:text-slate-200">
+    <h1 class="text-4xl font-bold my-10 text-center">Hello Carissa</h1>
+    <h1 class="text-2xl">Aku sedang belajar <span class="bg-gradient-to-r from-blue-600 to-teal-400 bg-clip-text text-transparent font-semibold">TailwindCSS</span></h1>
+    <section class="mb-10 bg-blue-300">
+        <h2 class="text-2xl text-center">Spacing</h2>
+        <div class="m-13 bg-gradient-to-r from-pink-50 to-pink-700">Margin</div>
+        <div class="py-8 bg-gradient-to-r from-pink-600 via-red-500 to-purple-600">Padding</div>
+    </section>
+
+    <section class="mb-10 bg-green-500">
+        <h2 class="text-2xl text-center">Sizing</h2>
+        <div class="w-32 h-32 bg-red-600">Kotak 1</div>
+    </section>
+
+    <section class="font-inter max-w-3xl mx-auto">
+        <h2 class="mb-2 text-4xl font-bold">Belajar mengenai Typography pada TailwindCSS</h2>
+        <div class="mb-4 text-lg text-gray-500">by Dian Fajar, 21 Juni 2022</div>
+        <p class="mb-4">
+            Lorem ipsum dolor sit amet <a href="#" class="underline font-semibold text-blue-600">consectetur</a> adipisicing elit. Culpa, quae qui? Molestiae totam nostrum veniam vel facilis. Eligendi totam sed impedit quisquam. Cumque accusantium eius debitis, impedit sequi vel atque eaque rerum dicta, inventore esse laboriosam dolores? Quia vitae vel a eius? Repudiandae tempora maiores reiciendis autem earum, modi corrupti!
+        </p>
+        <blockquote class="mb-4 text-xl italic font-thin">
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A, doloremque vitae. Consequuntur velit repellat veniam amet possimus neque quisquam sed."
+        </blockquote>
+        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet in inventore expedita quod modi eum fuga odio voluptas, tempora tempore, explicabo id numquam architecto voluptates consequatur ducimus doloremque dolorum nihil.</p>
+    </section>
+
+    <div class="max-w-xl h-96 bg-[#bada55] mx-auto mt-[42px] overflow-y-scroll bg-fixed" style="background-image: url('https://source.unsplash.com/1000x600?computer');">
+    <p class="p-5 text-2xl">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet rem ex voluptatum harum neque! A porro tempora placeat ipsum doloribus labore ullam tempore harum assumenda minus facere sapiente, iste fugit aliquid libero quod, repellendus corrupti eum accusantium mollitia deleniti quo saepe sint! A, veniam nisi? Molestiae iusto obcaecati voluptate impedit minus ab illo odio est ex libero veniam reiciendis in, ipsa sunt doloremque nemo, quidem vitae. Quas, dignissimos! Nihil libero eum doloremque ipsam obcaecati culpa nam laudantium rerum iste! Nesciunt velit minus consectetur alias molestias rerum earum repellendus quae voluptate molestiae laborum magni tenetur deserunt quidem soluta, cupiditate expedita possimus itaque harum perspiciatis. Ipsa quos ratione reiciendis suscipit placeat debitis autem ad voluptas odit doloribus facere nesciunt asperiores, hic magnam impedit illum. Fugit debitis expedita impedit iste natus cupiditate inventore tenetur doloribus suscipit doloremque excepturi dolores vel voluptate, consectetur adipisci provident temporibus eveniet soluta vitae nobis necessitatibus quas obcaecati? Nam, esse debitis dicta architecto perspiciatis voluptatem corrupti nisi amet inventore! Tempore distinctio provident explicabo. Iusto odio architecto rerum eaque ad, adipisci, pariatur natus sunt fugit veritatis non ratione ducimus vero excepturi dolores ipsam officia soluta assumenda distinctio nesciunt quod! Assumenda quos vitae nisi veritatis sint illo error velit minima ipsa?
+    </p>
+    </div>
+
+    <div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-2xl shadow-xl shadow-slate-400 overflow-hidden flex" style="background-image: url('./img/macbook.jpg');">
+        <div class="w-[200px] h-[200px] bg-white/30 m-auto backdrop-blur-md rounded-full"></div>
+    </div>
+
+    <hr class="my-20"/>
+
+    <div class="flex justify-center">
+      <span class="text-sm text-slate-500 mr-2">Light</span>
+      <input type="checkbox" id="toggle" class="hidden">
+      <label for="toggle">
+        <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer">
+          <div class="w-4 h-4 bg-white rounded-full toggle-circle"></div>
+        </div>
+      </label>
+      <span class="text-sm text-slate-500 ml-2">Dark</span>
+    </div>
+
+    <button class="my-10 bg-sky-500 px-5 py-2 rounded-full text-white font-inter block mx-auto hover:bg-sky-600 active:bg-sky-700 focus:ring focus:ring-sky-300 dark:bg-slate-300 dark:text-slate-800 dark:hover:text-slate-900 dark:hover:bg-slate-100">Save changes</button>
+
+    <div class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md font-inter hover:bg-sky-500 group font-serif dark:hover:bg-slate-300">
+      <h5 class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white dark:group-hover:text-slate-800">My Card</h5>
+      <p class="text-slate-600 group-hover:text-white selection:bg-lime-300 selection:text-slate-900 first-letter:text-7xl first-letter:float-left first-letter:mr-2 dark:group-hover:text-slate-800">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum rerum unde officia ducimus, cum sint, repellat, est labore quo aperiam ipsa dolorum non. Mollitia officia perferendis distinctio beatae tenetur ipsum?</p>
+    </div>
+
+    <div class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md font-inter">
+      <form action="">
+        <label for="email">
+          <span class="block font-semibold mb-1 text-slate-700 after:content-['*'] after:text-pink-500 after:ml-0.5">Email</span>
+          <input type="email" id="email" placeholder="Masukkan email anda.." class="px-3 py-2 border shadow rounded w-full block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer">
+          <p class="text-sm m-1 text-pink-700 invisible peer-invalid:visible">Email tidak valid</p>
+        </label>
+      </form>
+    </div>
+
+
+
+    <div class="mb-96"></div>
+
+    <script>
+      const checkbox = document.querySelector('#toggle');
+      const html = document.querySelector('html');
+
+      checkbox.addEventListener('click', function(){
+        checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark');
+      });
+    </script>
+</body>
+</html>

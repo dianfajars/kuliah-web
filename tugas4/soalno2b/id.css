@@ -1,0 +1,17 @@
+#header {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: green;
+}
+
+#red {
+    color: white;
+    background: red;
+    padding: 5px;
+  }
+
+#blue {
+    color: white;
+    background: lightblue;
+    padding: 5px;
+}

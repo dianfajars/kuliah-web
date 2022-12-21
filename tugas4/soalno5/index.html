@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Table with CSS</title>
+    <style>
+    h1{
+        color: #004298;
+    }
+
+    .content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 500px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+    .content-table thead tr {
+  background-color: #004298;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #004298;
+}
+    </style>
+</head>
+<body>
+    <h1>Tabel Mahasiswa</h1>
+    <table class="content-table">
+        <thead>
+            <tr>
+                <th>NO</th>
+                <th>NAMA</th>
+                <th>NIM</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Dian Fajar</td>
+                <td>20200801194</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Ichlasul Fikri</td>
+                <td>20200801123</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Muhammad Shalbi</td>
+                <td>20200801456</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Yohanes Bagas</td>
+                <td>20200801789</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

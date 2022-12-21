@@ -1,0 +1,17 @@
+.green {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: green;
+}
+
+.pink {
+    color: white;
+    background: pink;
+    padding: 5px;
+  }
+
+.blue {
+    color: white;
+    background: blue;
+    padding: 5px;
+}

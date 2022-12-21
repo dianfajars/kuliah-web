@@ -1,0 +1,13 @@
+body{
+    background: black;
+    color: white;
+}
+
+h1{
+    color: green;
+    border-bottom: 2px solid white;
+}
+
+p{
+    color: yellow;
+}
